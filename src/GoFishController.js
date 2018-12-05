@@ -17,7 +17,7 @@ class GoFishController {
 
   playRound(game, player, rank) {
     game.playTurn(player, rank)
-    // if (game.gameWinner()) new GameOverView(game).draw(this.container());
+    if (game.gameWinner()) new GameOverView(game).draw(this.container());
     const view = new GameView(game, this.playRound.bind(this))
     view.draw(this.container())
   }

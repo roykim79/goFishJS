@@ -39,4 +39,10 @@ describe('RoundResult', () => {
       expect(roundResult.guessedRight()).toEqual(true);
     })
   })
+
+  describe('toString', () => {
+    it('returns the round result as a string', () => {
+
+    })
+  });
 });

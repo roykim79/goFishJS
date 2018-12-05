@@ -144,8 +144,9 @@ describe('GoFish', () => {
       goFishGame.nextPlayer();
       goFishGame.playForBot();
       expect(robot1.cardCount()).not.toEqual(7);
-      expect(goFishGame.roundResults().length).toEqual(1);
-      // assert round result shows robot playing
+      expect(goFishGame.roundResults().length).toBeGreaterThan(0);
+      expect(goFishGame.roundResults()[0].asker().name()).toEqual('Robot1')
+      expect(goFishGame.roundResults()[0].target().name()).toEqual('Player1')
     });
   });
 });

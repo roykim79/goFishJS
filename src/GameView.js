@@ -91,6 +91,7 @@ class GameView {
     container.innerHTML = '';
     if (game.gameWinner()) {
       element.innerHTML = `<div>Winner is ${game.gameWinner().name()}</div>`
+      resultsView.draw(element);
     } else {
       element.innerHTML += (this.opponentMarkup(game.players()[1]));
       element.innerHTML += (this.opponentMarkup(game.players()[2]));
